@@ -55,6 +55,7 @@ input {
 
 .upload-file {
   display: inline;
+  margin-left: 3px;
 }
 
 .radio-button {
