@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+        <h1 class="form-title">Formular de inregistrare</h1>
+        <div class="form-container">
+            <form action="/" class="form-content" method="GET" id="form">
+                <fieldset>
+
+               <legend><h3>Pasul 1: Detalii utilizator</h3></legend>
+
+               <label for="file">Importa imagine: </label>
+               <input type="file" id="myfile" name="myfile"><br><br>
+
+               <label for="nume">Nume: </label>
+               <input type="text" id="nume" class="form-input" name="nume" placeholder="Nume"><br><br>
+            
+               <label for="prenume">Prenume: </label>
+               <input type="text" id="prenume" class="form-input" name="prenume" placeholder="Prenume"><br>
+               <br>    
+               
+              <span>Sex:</span> <input type="radio" id="masculin" name="masculin" value="masculin">
+              <label for="masculin">Masculin</label>
+               
+               <input type="radio" id="feminin" name="feminin" value="feminin">
+               <label for="feminin">Feminin</label>
+               <br>
+               <br>
+
+               <label for="data-nastere">Data nasterii: </label>
+               <input type="date" id="birthday" name="birthday"><br><br>
+
+               
+               
+                </fieldset>
+            </form>
+        </div><br><br>
+
+
+        <div class="form-container">
+            
+    
+                    <form action="/" class="form-content" method="GET" id="form">
+                       <fieldset>
+        
+                       <legend><h3>Pasul 2: Detalii contact</h3></legend>
+        
+        
+                       <label for="numar">Numar telefon: </label>
+                       <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Numar de telefon"><br><br>
+                    
+                       <label for="email">Adresa de email: </label>
+                       <input type="email" id="email" class="form-input" name="email" placeholder="Adresa de email"><br><br>    
+                       
+                       <label for="judet">Judet: </label>
+                       <select id="judet" name="judet">
+                         <option value="alba">Alba</option>
+                         <option value="arad">Arad</option>
+                         <option value="arges">Arges</option>
+                         <option value="bacau">Bacau</option>
+                         <option value="bihor">Bihor</option>
+                         <option value="bistrita-nasaud">Bistrita-Nasaud</option>
+                         <option value="botosani">Botosani</option>
+                         <option value="brasov">Brasov</option>
+                         <option value="braila">Braila</option>
+                         <option value="bucuresti">Bucuresti</option>
+                         <option value="buzau">Buzau</option>
+                       </select><br><br>
+
+                       <label for="oras">Oras: </label>
+                       <select id="judet" name="judet">
+                        <option value="alba-iulia">Alba-Iulia</option>
+                        <option value="arad">Arad</option>
+                        <option value="arges">Pitesti</option>
+                        <option value="bacau">Bacau</option>
+                        <option value="oradea">Oradea</option>
+                        <option value="bistrita">Bistrita</option>
+                        <option value="botosani">Botosani</option>
+                        <option value="brasov">Brasov</option>
+                        <option value="braila">Braila</option>
+                        <option value="bucuresti">Bucuresti</option>
+                        <option value="buzau">Buzau</option>
+                      </select><br><br>
+
+                      <label for="adresa">Adresa: </label><br><br>
+                      <textarea name="message" rows="10" cols="30"></textarea><br><br>
+
+                      <label for="cod-postal">Cod postal:</label>
+                      <input id="zip" name="zip" type="text" pattern="[0-9]*"><br><br>
+
+                    </fieldset>
+                    </form>
+        </div><br><br>
+
+        <div class="form-container">
+            <form action="/" class="form-content" method="GET" id="form">
+                <fieldset>
+ 
+                <legend><h3>Pasul 2: Detalii contact</h3></legend>
+
+                    <label for="parola">Parola: </label>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <label for="parola">Confirma parola: </label>
+                    <input type="password" id="password" name="password"><br><br>
+
+                    <input type="checkbox" id="newsletter" name="newsletter" value="Newsletter">
+                    <label for="newsletter"> Doresc sa ma abonez la newsletter</label><br><br>
+
+                    <input type="checkbox" id="termeni" name="termeni" value="Termeni">
+                    <label for="termeni"> Sunt de acord cu termenii si conditiile</label><br><br>
+
+                    <input type="button" value="Inregistrare"><br><br>
+
+                </fieldset>
+
+        </div>
+    </fieldset>
+    </div>
+</body>
+</html>
