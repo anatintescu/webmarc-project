@@ -89,12 +89,32 @@ function passwordMatch(input1, input2) {
 } */
 
 const stepsButton = document.getElementById('steps');
-const displayForm = document.getElementById('formId');
-const displayForm2 = document.getElementById('formId2');
+const stepsButton2 = document.getElementById('steps2');
+const displayForm1 = document.getElementById('form');
+const displayForm2 = document.getElementById('formId');
+const displayForm3 = document.getElementById('formId2;')
+
+function displayForm() {
 
 stepsButton.addEventListener('click', function(e) {
     e.preventDefault();
-    if(displayForm.style.display = "none") {
+    if(displayForm.style.display = 'none') {
         displayForm.style.display = 'block'
-    }
+    } 
 })
+
+stepsButton2.addEventListener('click', function(e) {
+    e.preventDefault();
+    if(displayForm2.style.display = 'none') {
+        displayForm2.style.display = 'block'
+    } 
+})
+}
+
+displayForm();
+
+
+
+
+
+
