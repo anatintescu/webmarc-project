@@ -129,16 +129,12 @@ margin: 15px 0 5px -4px;
   margin-right: 0 auto;
 }
 
-body {
-  background: red;
-}
-
 
 #formId {
   display: none;
 }
 
-#formId2 {
-  display: none;
+body {
+  background: red;
 }
 
