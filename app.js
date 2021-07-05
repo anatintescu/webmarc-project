@@ -92,7 +92,7 @@ const stepsButton = document.getElementById('steps');
 const stepsButton2 = document.getElementById('steps2');
 const displayForm1 = document.getElementById('form');
 const displayForm2 = document.getElementById('formId');
-const displayForm3 = document.getElementById('formId2;')
+const displayForm3 = document.getElementById('formId2');
 
 
 
@@ -110,18 +110,21 @@ stepsButton2.addEventListener('click', function(e) {
     } 
 }) */
 
-function displayForm() {
-    stepsButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        if(displayForm2.style.display === 'none') {
-            displayForm2.style.display = 'block'
-        }
-    })
-};
-
-displayForm();
 
 
+stepsButton.addEventListener('click', function() {
+    displayForm(displayForm1, displayForm2);
+});
+
+stepsButton2.addEventListener('click', function() {
+    displayForm(displayForm2, displayForm3);
+})
+
+
+function displayForm(a, b) {
+    a.style.display = 'none';
+    b.style.display = 'block';
+}
 
 
 
