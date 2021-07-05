@@ -10,59 +10,69 @@
 </head>
 
 <body>
-    <form class="container">
+    <form class="container" id="form">
         <h1 class="form-title">Formular de inregistrare</h1>
         <fieldset>
             <div class="form-container">
-                
-                    <fieldset>
 
-                        <legend>
-                            <h3>Pasul 1: Detalii utilizator</h3>
-                        </legend>
-                        <div>
+                <fieldset>
+
+                    <legend>
+                        <h3>Pasul 1: Detalii utilizator</h3>
+                    </legend>
+                    <div class="form-validation">
                         <label for="file" class="user-image">Importa imagine:</label>
                         <input type="file" id="myfile" name="myfile" class="upload-file">
                     </div>
+                    <div class="form-validation">
                         <label for="nume">Nume: </label>
-                        <input type="text" id="nume" class="form-input" name="nume" placeholder="Nume">
-
-                        <label for="prenume">Prenume: </label>
-                        <input type="text" id="prenume" class="form-input" name="prenume" placeholder="Prenume">
-                    <div>
-                        <div class="sex">Sex:</div> <input type="radio" id="masculin" name="sex" value="masculin"
+                        <input type="text" id="name" class="form-input" name="nume" placeholder="Nume">
+                       <!-- <p>Error Message</p> -->
+                    </div>
+                    <div class="form-validation">
+                    <label for="prenume">Prenume: </label>
+                    <input type="text" id="fname" class="form-input" name="prenume" placeholder="Prenume">
+                       <!--<p>Error Message</p>-->
+                </div>
+                    <div class="form-validation">
+                        <div class="sex">Sex:</div> <input type="radio" id="male" name="sex" value="masculin"
                             class="radio-button">
                         <label for="sex" class="radio-button">Masculin</label>
 
-                        <input type="radio" id="feminin" name="sex" value="feminin" class="radio-button">
+                        <input type="radio" id="female" name="sex" value="feminin" class="radio-button">
                         <label for="sex" class="radio-button">Feminin</label>
+                      <!--<p>Error Message</p>-->
                     </div>
-                
+                    <div class="form-validation">
                         <label for="data-nastere">Data nasterii: </label>
                         <input type="date" id="birthday" name="birthday" class="form-input my-input">
-        
-                    </fieldset>
+                       <!--<p>Error Message</p>-->
+                    </div>
+                    <button id="steps">Pasul 2</button>
+                </fieldset>
                 
             </div>
 
-            <div class="form-container">
-                
-                    <fieldset>
+            <div class="form-container" id="formId">
 
-                        <legend>
-                            <h3>Pasul 2: Detalii contact</h3>
-                        </legend>
+                <fieldset>
 
+                    <legend>
+                        <h3>Pasul 2: Detalii contact</h3>
+                    </legend>
+                    <div class="form-validation">
                         <label for="numar">Numar telefon: </label>
-                        <input type="tel" id="phone" name="phone"
-                            placeholder="Numar de telefon" class="form-input">
-
+                        <input type="tel" id="phone" name="phone" placeholder="Numar de telefon" class="form-input">
+                       <!--<p>Error Message</p>-->
+                    </div>
+                    <div class="form-validation">
                         <label for="email">Adresa de email: </label>
-                        <input type="email" id="email" class="form-input" name="email"
-                            placeholder="Adresa de email">
-
-                        <label for="judet">Judet: </label>
-                        <select id="judet" name="judet" class="form-input my-input">
+                        <input type="email" id="email" class="form-input" name="email" placeholder="Adresa de email">
+                       <!--<p>Error Message</p>-->
+                    </div>
+                    <div class="form-validation">
+                        <label for="county">Judet: </label>
+                        <select id="county" name="county" class="form-input my-input">
                             <option value="alba">Alba</option>
                             <option value="arad">Arad</option>
                             <option value="arges">Arges</option>
@@ -75,9 +85,11 @@
                             <option value="bucuresti">Bucuresti</option>
                             <option value="buzau">Buzau</option>
                         </select>
-
-                        <label for="oras">Oras: </label>
-                        <select id="judet" name="judet" class="form-input my-input">
+                       <!--<p>Error Message</p>-->
+                    </div>
+                    <div class="form-validation">
+                        <label for="city">Oras: </label>
+                        <select id="city" name="city" class="form-input my-input">
                             <option value="alba-iulia">Alba-Iulia</option>
                             <option value="arad">Arad</option>
                             <option value="arges">Pitesti</option>
@@ -90,46 +102,58 @@
                             <option value="bucuresti">Bucuresti</option>
                             <option value="buzau">Buzau</option>
                         </select>
-
-                        <label for="address">Adresa: </label>
-                        <textarea name="message" rows="10" cols="30" class="form-input" id="address"></textarea>
-
-                        <label for="cod-postal">Cod postal:</label>
-                        <input id="zip" name="zip" type="text" form-input class="form-input">
-
-                    </fieldset>
-                
+                       <!--<p>Error Message</p>-->
+                    </div>
+                    <div class="form-validation">
+                    <label for="address">Adresa: </label>
+                    <textarea name="message" rows="10" cols="30" class="form-input" id="address"></textarea>
+                    <p>Error Message</p>
+                    </div>
+                    <div class="form-validation">
+                    <label for="cod-postal">Cod postal:</label>
+                    <input id="zip" name="zip" type="text" form-input class="form-input">
+                   <!--<p>Error Message</p>-->
+                </div>
+                <button id="steps">Pasul 3</button>
+                </fieldset>
+                    
             </div>
 
-            <div class="form-container">
-                
-                    <fieldset>
+            <div class="form-container" id="formId2">
 
-                        <legend>
-                            <h3>Pasul 3: Credentiale</h3>
-                        </legend>
+                <fieldset>
 
-                        <label for="parola">Parola: </label>
-                        <input type="password" id="password" name="password" class="form-input">
-
-                        <label for="parola">Confirma parola: </label>
-                        <input type="password" id="password" name="password" class="form-input">
+                    <legend>
+                        <h3>Pasul 3: Credentiale</h3>
+                    </legend>
+                    <div class="form-validation">
+                    <label for="parola">Parola: </label>
+                    <input type="password" id="password" name="password" class="form-input">
+                </div>
+                <div class="form-validation">
+                    <label for="parola">Confirma parola: </label>
+                    <input type="password" id="password-confirm" name="password" class="form-input">
+                   <!--<p>Error Message</p>-->
+                </div>
                     <div class="terms">
                         <input type="checkbox" id="newsletter" name="newsletter" value="Newsletter">
                         <label for="newsletter"> Doresc sa ma abonez la newsletter</label>
                     </div>
-                    <div class="terms">
+                    <div class="terms form-validation">
                         <input type="checkbox" id="terms" name="terms" value="Terms">
                         <label for="terms"> Sunt de acord cu termenii si conditiile</label>
+                       <!--<p>Error Message</p>-->
                     </div>
-                        <input type="button" value="Inregistrare" class="my-btn">
+                    <input type="submit" value="Inregistrare" class="my-btn">
 
-                    </fieldset>
+                </fieldset>
 
             </div>
         </fieldset>
 
     </form>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

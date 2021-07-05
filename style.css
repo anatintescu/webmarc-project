@@ -3,9 +3,6 @@
 } 
 
 
-body {
-  background: red
-}
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 
@@ -82,7 +79,7 @@ label {
   text-decoration: none;
   background: #0294e3;
   float: right;
-  margin: 20px;
+  margin: 0 auto;
 }
 
 .my-input {
@@ -108,3 +105,26 @@ textarea {
 margin: 15px 0 5px -4px;
 }
 
+#steps {
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  background: #0294e3;
+  float: right;
+  margin-right: 0 auto;
+}
+
+#formId {
+  display: none;
+}
+
+#formId2 {
+  display: none;
+}
+
+body {
+  background: red;
+}
