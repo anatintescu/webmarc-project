@@ -20,23 +20,23 @@
                         <legend>
                             <h3>Pasul 1: Detalii utilizator</h3>
                         </legend>
-
-                        <label for="file">Importa imagine: </label>
+                        <div>
+                        <label for="file" class="user-image">Importa imagine:</label>
                         <input type="file" id="myfile" name="myfile" class="upload-file">
-
+                    </div>
                         <label for="nume">Nume: </label>
                         <input type="text" id="nume" class="form-input" name="nume" placeholder="Nume">
 
                         <label for="prenume">Prenume: </label>
                         <input type="text" id="prenume" class="form-input" name="prenume" placeholder="Prenume">
-
+                    <div>
                         <div class="sex">Sex:</div> <input type="radio" id="masculin" name="sex" value="masculin"
                             class="radio-button">
                         <label for="sex" class="radio-button">Masculin</label>
 
                         <input type="radio" id="feminin" name="sex" value="feminin" class="radio-button">
                         <label for="sex" class="radio-button">Feminin</label>
-
+                    </div>
                         <label for="data-nastere">Data nasterii: </label>
                         <input type="date" id="birthday" name="birthday" class="form-input my-input">
 
@@ -113,13 +113,14 @@
 
                         <label for="parola">Confirma parola: </label>
                         <input type="password" id="password" name="password" class="form-input">
-
-                        <input type="checkbox" id="newsletter" name="newsletter" value="Newsletter" class="terms">
-                        <label for="newsletter" class="terms"> Doresc sa ma abonez la newsletter</label>
-
-                        <input type="checkbox" id="terms" name="terms" value="Terms" class="terms">
-                        <label for="terms" class="terms"> Sunt de acord cu termenii si conditiile</label>
-
+                    <div class="terms">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="Newsletter">
+                        <label for="newsletter"> Doresc sa ma abonez la newsletter</label>
+                    </div>
+                    <div class="terms">
+                        <input type="checkbox" id="terms" name="terms" value="Terms">
+                        <label for="terms"> Sunt de acord cu termenii si conditiile</label>
+                    </div>
                         <input type="button" value="Inregistrare" class="my-btn">
 
                     </fieldset>
