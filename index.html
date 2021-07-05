@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="container">
+    <form class="container">
         <h1 class="form-title">Formular de inregistrare</h1>
         <fieldset>
             <div class="form-container">
-                <form action="/" class="form-content" method="GET" id="form">
+                
                     <fieldset>
 
                         <legend>
@@ -22,30 +22,30 @@
                         </legend>
 
                         <label for="file">Importa imagine: </label>
-                        <input type="file" id="myfile" name="myfile" class="upload-file"><br><br>
+                        <input type="file" id="myfile" name="myfile" class="upload-file">
 
                         <label for="nume">Nume: </label>
-                        <input type="text" id="nume" class="form-input" name="nume" placeholder="Nume"><br><br>
+                        <input type="text" id="nume" class="form-input" name="nume" placeholder="Nume">
 
                         <label for="prenume">Prenume: </label>
-                        <input type="text" id="prenume" class="form-input" name="prenume" placeholder="Prenume"><br><br>
+                        <input type="text" id="prenume" class="form-input" name="prenume" placeholder="Prenume">
 
                         <div class="sex">Sex:</div> <input type="radio" id="masculin" name="sex" value="masculin"
                             class="radio-button">
                         <label for="sex" class="radio-button">Masculin</label>
 
                         <input type="radio" id="feminin" name="sex" value="feminin" class="radio-button">
-                        <label for="sex" class="radio-button">Feminin</label><br><br>
+                        <label for="sex" class="radio-button">Feminin</label>
 
                         <label for="data-nastere">Data nasterii: </label>
-                        <input type="date" id="birthday" name="birthday" class="form-input my-input"><br><br>
+                        <input type="date" id="birthday" name="birthday" class="form-input my-input">
 
                     </fieldset>
-                </form>
-            </div><br><br>
+                
+            </div>
 
             <div class="form-container">
-                <form action="/" class="form-content" method="GET" id="form">
+                
                     <fieldset>
 
                         <legend>
@@ -53,12 +53,12 @@
                         </legend>
 
                         <label for="numar">Numar telefon: </label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                            placeholder="Numar de telefon" class="form-input"><br><br>
+                        <input type="tel" id="phone" name="phone"
+                            placeholder="Numar de telefon" class="form-input">
 
                         <label for="email">Adresa de email: </label>
                         <input type="email" id="email" class="form-input" name="email"
-                            placeholder="Adresa de email"><br><br>
+                            placeholder="Adresa de email">
 
                         <label for="judet">Judet: </label>
                         <select id="judet" name="judet" class="form-input my-input">
@@ -73,7 +73,7 @@
                             <option value="braila">Braila</option>
                             <option value="bucuresti">Bucuresti</option>
                             <option value="buzau">Buzau</option>
-                        </select><br><br>
+                        </select>
 
                         <label for="oras">Oras: </label>
                         <select id="judet" name="judet" class="form-input my-input">
@@ -88,20 +88,20 @@
                             <option value="braila">Braila</option>
                             <option value="bucuresti">Bucuresti</option>
                             <option value="buzau">Buzau</option>
-                        </select><br><br>
+                        </select>
 
-                        <label for="adresa">Adresa: </label><br><br>
-                        <textarea name="message" rows="10" cols="30" class="form-input"></textarea><br><br>
+                        <label for="address">Adresa: </label>
+                        <textarea name="message" rows="10" cols="30" class="form-input" id="address"></textarea>
 
                         <label for="cod-postal">Cod postal:</label>
-                        <input id="zip" name="zip" type="text" form-input class="form-input"><br><br>
+                        <input id="zip" name="zip" type="text" form-input class="form-input">
 
                     </fieldset>
-                </form>
-            </div><br><br>
+                
+            </div>
 
             <div class="form-container">
-                <form action="/" class="form-content" method="GET" id="form">
+                
                     <fieldset>
 
                         <legend>
@@ -109,25 +109,25 @@
                         </legend>
 
                         <label for="parola">Parola: </label>
-                        <input type="password" id="password" name="password" class="form-input"><br><br>
+                        <input type="password" id="password" name="password" class="form-input">
 
                         <label for="parola">Confirma parola: </label>
-                        <input type="password" id="password" name="password" class="form-input"><br><br>
+                        <input type="password" id="password" name="password" class="form-input">
 
-                        <input type="checkbox" id="newsletter" name="newsletter" value="Newsletter" class="my-checkbox">
-                        <label for="newsletter"> Doresc sa ma abonez la newsletter</label><br><br>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="Newsletter" class="terms">
+                        <label for="newsletter" class="terms"> Doresc sa ma abonez la newsletter</label>
 
-                        <input type="checkbox" id="termeni" name="termeni" value="Termeni" class="my-checkbox">
-                        <label for="termeni"> Sunt de acord cu termenii si conditiile</label><br><br>
+                        <input type="checkbox" id="terms" name="terms" value="Terms" class="terms">
+                        <label for="terms" class="terms"> Sunt de acord cu termenii si conditiile</label>
 
-                        <input type="button" value="Inregistrare" class="my-btn"><br><br>
+                        <input type="button" value="Inregistrare" class="my-btn">
 
                     </fieldset>
 
             </div>
         </fieldset>
 
-    </div>
+    </form>
 </body>
 
 </html>
