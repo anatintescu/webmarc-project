@@ -142,7 +142,7 @@ margin: 15px 0 5px -4px;
 
 :root {
   --errorColor: #f00e0e;
-  --validColor: #0add0a;
+ 
 }
 
 .form-validation.error {
@@ -152,12 +152,6 @@ margin: 15px 0 5px -4px;
   border-radius: 4px;
 }
 
-.form-validation.valid {
-  margin-bottom: 0.5rem;
-  position: relative;
-  border: 1px solid var(--validColor);
-  border-radius: 4px;
-}
 
 .form-validation p {
   font-size: 11px;
