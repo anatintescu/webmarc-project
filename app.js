@@ -1,3 +1,4 @@
+const input = document.getElementsByTagName('input')
 const form = document.getElementById('form');
 const lName = document.getElementById('lName');
 const fName = document.getElementById('fName');
@@ -165,6 +166,9 @@ function checkRequired(inputArr) {
    
 }
 
+// Get Fieldname 
+function getFieldName(input) {
+    return input.name.charAt(0).toUpperCase() + input.lName.slice(1);    }
 
 
 
