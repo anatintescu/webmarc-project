@@ -89,7 +89,7 @@ label {
 
 .form-input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   height: 30px;
   border: 1px solid rgb(173, 158, 158);
   border-radius: 3px;
@@ -137,4 +137,37 @@ margin: 15px 0 5px -4px;
 #formId2 {
   display: none;
 }
+
+/* Form Validation */
+
+:root {
+  --errorColor: #f00e0e;
+  --validColor: #0add0a;
+}
+
+.form-validation.error {
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 1px solid var(--errorColor);
+  border-radius: 4px;
+}
+
+.form-validation.valid {
+  margin-bottom: 0.5rem;
+  position: relative;
+  border: 1px solid var(--validColor);
+  border-radius: 4px;
+}
+
+.form-validation p {
+  font-size: 11px;
+  margin-top: 5px;
+  color: var(--errorColor);
+  display: none;
+}
+
+.form-validation.error p {
+  display: block;
+}
+
 

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form class="container" >
+    <form class="container" name="form" onsubmit = "return(validate());">
         <h1 class="form-title">Formular de inregistrare</h1>
         <fieldset>
             <div class="form-container" id="form">
@@ -26,13 +26,13 @@
                     </div>
                     <div class="form-validation">
                         <label for="nume">Nume: </label>
-                        <input type="text" id="name" class="form-input" name="nume" placeholder="Nume">
-                       <!-- <p>Error Message</p> -->
+                        <input type="text" id="lName" class="form-input" name="lName" placeholder="Nume">
+                       <p class="error">Numele este obligatoriu</p>
                     </div>
                     <div class="form-validation">
                     <label for="prenume">Prenume: </label>
-                    <input type="text" id="fname" class="form-input" name="prenume" placeholder="Prenume">
-                       <!--<p>Error Message</p>-->
+                    <input type="text" id="fName" class="form-input" name="fName" placeholder="Prenume">
+                      <p class="error">Prenumele este obligatoriu</p>
                 </div>
                     <div class="form-validation">
                         <div class="sex">Sex:</div> <input type="radio" id="male" name="sex" value="masculin"
@@ -154,6 +154,7 @@
     </form>
 
     <script src="app.js"></script>
+    <script src="app2.js"></script>
 </body>
 
 </html>
