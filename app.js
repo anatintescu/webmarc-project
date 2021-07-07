@@ -27,25 +27,16 @@ const displayForm3 = document.getElementById('formId2');
 
 stepsButton.addEventListener('click', function () {
 
-     if (formValidation2(inputArr)) {
-         displayForm(displayForm2, displayForm3);
-     } else {
-        return false
-     } 
-
-
+     if (formValidation(inputArr)) {
+         displayForm(displayForm1, displayForm2);
+         return false;
+     }
 
 });
 
 
 stepsButton2.addEventListener('click', function () {
 
-
-    /* if (formValidation2()) {
-         displayForm(displayForm2, displayForm3);
-     } else {
-         return false;
-     } */
 
 });
 
@@ -56,100 +47,19 @@ function displayForm(a, b) {
 }
 
 
-/* function formValidation1() {
-
-    if (document.form.lName.value == '') {
-        alert('Numele este obligatoriu')
-        document.form.lName.focus();
-        return false;
-
-    }
-
-    if (document.form.fName.value == '') {
-        alert('Prenumele este obligatoriu')
-        document.form.fName.focus();
-        return false;
-    }
-
-    if (document.form.birthday.value == '') {
-        {
-            alert("Alegeti data nasterii");
-            document.form.fName.focus();
-            return false;
-        }
-    }
-
-    else {
-        displayForm2.style.display = 'block'
-    }
-
-};
-
-
-function formValidation2() {
-    if (document.form.phone.value == '') {
-        alert("Introduceti numarul de telefon");
-        document.form.phone.focus();
-        return false;
-
-    }
-
-    if (document.form.email.value == '') {
-        alert("Introduceti adresa de email");
-        document.form.email.focus();
-        return false;
-    }
-
-    if (document.form.county.value == '') {
-        {
-            alert("Alegeti judetul");
-            document.form.county.focus();
-            return false;
-        }
-    }
-
-    if (document.form.county.value == '') {
-        {
-            alert("Alegeti orasul");
-            document.form.city.focus();
-            return false;
-        }
-    }
-
-    if (document.form.address.value == '') {
-        {
-            alert("Introduceti adresa");
-            document.form.address.focus();
-            return false;
-        }
-    }
-
-    if (document.form.zip.value == '') {
-        {
-            alert("Introduceti codul postal");
-            document.form.zip.focus();
-            return false;
-        }
-    }
-
-    else {
-        displayForm3.style.display = 'block';
-    }
-
-};
- */
-
 var inputArr = [lName, fName, birthday,];
 var inputArr2 = [phone, email, county, city, address, zip];
 var inputArr3 = [password, passwordConfirm];
 
 function formValidation(inputArr) {
-    for (let i = 0; i < inputArr.length; i++) {
+    for (let i = 2; i < inputArr.length; i++) {
         if (inputArr[i].value === '') {
             alert("Nu ati completat toate campurile");
             break;
         }
+        return true;
     }
+   
 }
 
 
