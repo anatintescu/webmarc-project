@@ -27,10 +27,10 @@ const displayForm3 = document.getElementById('formId2');
 
 stepsButton.addEventListener('click', function () {
 
-     if (formValidation(inputArr)) {
-         displayForm(displayForm1, displayForm2);
-         return false;
-     }
+    if (formValidation(inputArr)) {
+        displayForm(displayForm1, displayForm2);
+        return false;
+    }
 
 });
 
@@ -54,29 +54,53 @@ var inputArr = [lName, fName, birthday,];
 var inputArr2 = [phone, email, county, city, address, zip];
 var inputArr3 = [password, passwordConfirm, terms];
 
-const errorMessage = document.querySelector('p');
+
 
 
 function formValidation(inputArr) {
     for (let i = 2; i < inputArr.length; i++) {
         if (inputArr[i].value === '') {
-            errorMessage.style.display = 'block'
+            errorFunc();
             break;
         }
         return true;
     }
-   
+
 }
 
 function formValidation2(inputArr2) {
     for (let i = 5; i < inputArr2.length; i++) {
         if (inputArr2[i].value === '') {
-            errorMessage.style.display = 'block'
+            errorFunc2();
             break;
         }
         return true;
     }
 }
+
+
+/* function showError(input, message) {
+    const formValidation = input.parentElement;
+    const errorMessage = formValidation.querySelector('p');
+    errorMessage.innerText = message;
+
+
+} */
+
+const errorMessage = document.querySelector(".error");
+const errorFunc = () => {
+  errorMessage.style.display = "block"
+}
+
+
+const errorMessage2 = document.querySelector(".error2");
+const errorFunc2 = () => {
+  errorMessage2.style.display = "block"
+}
+
+
+
+
 
 
 
