@@ -140,21 +140,9 @@ margin: 15px 0 5px -4px;
 
 /* Form Validation */
 
-.error {
-  color: #f00e0e;
-  font-size: 12px;
-  display: none;
-}
-
-.error2 {
-  color: #f00e0e;
-  font-size: 12px;
-  display: none;
-}
-
-.error3 {
-  color: #f00e0e;
-  font-size: 12px;
-  display: none;
+small {
+  display: none; 
+  color: red;
+  font-size: 12;
 }
 

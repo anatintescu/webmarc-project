@@ -16,7 +16,7 @@ const passwordConfirm = document.getElementById('password-confirm');
 const terms = document.getElementById('terms');
 
 
-/* Hide / Display Each Form Step */
+// Hide / Display Each Form Step 
 
 const stepsButton = document.getElementById('steps');
 const stepsButton2 = document.getElementById('steps2');
@@ -26,27 +26,38 @@ const displayForm2 = document.getElementById('formId');
 const displayForm3 = document.getElementById('formId2');
 
 
-stepsButton.addEventListener('click', function () {
 
+stepsButton.addEventListener('click', function () {
+    ;
     if (formValidation(inputArr)) {
         displayForm(displayForm1, displayForm2);
-        return false;
+        
+
+    } else {
+        errorMessage(error);
     }
 
 });
 
 
 stepsButton2.addEventListener('click', function () {
-    if (formValidation2(inputArr2)) {
+    
+    if (formValidation(inputArr2)) {
         displayForm(displayForm2, displayForm3);
-        return false;
+        
+    } else {
+        errorMessage(error2);
     }
 
 });
 
 stepsButton3.addEventListener('click', function (e) {
     e.preventDefault();
-    formValidation3(inputArr3);
+   if(formValidation(inputArr3)) {
+       console.log();
+   } else {
+       errorMessage(error3);
+   }
 });
 
 
@@ -57,57 +68,42 @@ function displayForm(a, b) {
     b.style.display = 'block';
 }
 
+// Form Validation
 
-var inputArr = [lName, fName, birthday,];
-var inputArr2 = [phone, email, county, city, address, zip];
-var inputArr3 = [password, passwordConfirm, terms];
+const inputArr = [lName, fName, birthday,];
+const inputArr2 = [phone, email, county, city, address, zip];
+const inputArr3 = [password, passwordConfirm, terms];
+const error = document.querySelector('.error');
+const error2 = document.querySelector('.error2');
+const  error3 = document.querySelector('.error3');
+  
 
 
-
-
-function formValidation(inputArr) {
-    for (let i = 2; i < inputArr.length; i++) {
-        if (inputArr[i].value === '') {
-            errorFunc();
-            break;
+function formValidation(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].value === '') {
+            return false;
         }
-        return true;
+        
     }
-
-}
-
-function formValidation2(inputArr2) {
-    for (let i = 5; i < inputArr2.length; i++) {
-        if (inputArr2[i].value === '') {
-            errorFunc2();
-            break;
-        }
-        return true;
+    return true;
     }
+     
+function errorMessage(err) {
+    
+        err.style.display = 'block';
+
+        
+       
 }
-
-function formValidation3(inputArr3) {
-    for (let i = 0; i < inputArr3.length; i++) {
-        if (inputArr3[i].value === '') {
-            errorFunc3();
-            break;
-        }
-        return true;
-    }
-}
+  
 
 
 
 
-/* function showError(input, message) {
-    const formValidation = input.parentElement;
-    const errorMessage = formValidation.querySelector('p');
-    errorMessage.innerText = message;
+// Show Error Message
 
-
-} */
-
-const errorMessage3 = document.querySelector(".error3");
+/* const errorMessage3 = document.querySelector(".error3");
 const errorFunc3 = () => {
     errorMessage3.style.display = "block"
 }
@@ -121,6 +117,8 @@ const errorMessage = document.querySelector(".error");
 const errorFunc = () => {
     errorMessage.style.display = "block"
 }
+
+*/
 
 
 

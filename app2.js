@@ -200,7 +200,24 @@ function formValidation2() {
 };
 */
 
+// function formValidation2(inputArr2) {
+//     for (let i = 0; i < inputArr2.length; i++) {
+//         if (inputArr2[i].value === '') {
+//             errorFunc2();
+//             return;
+//         }
 
-function formValidation(input, message) {
-    
-}
+//     }
+//     return true;
+// }
+
+// function formValidation3(inputArr3) {
+//     for (let i = 0; i < inputArr3.length; i++) {
+//         if (inputArr3[i].value === '') {
+//             errorFunc3();
+//             return;
+//         }
+
+//     }
+//     return true;
+// }
