@@ -20,6 +20,7 @@ const terms = document.getElementById('terms');
 
 const stepsButton = document.getElementById('steps');
 const stepsButton2 = document.getElementById('steps2');
+const stepsButton3 = document.getElementById('submit-btn');
 const displayForm1 = document.getElementById('form');
 const displayForm2 = document.getElementById('formId');
 const displayForm3 = document.getElementById('formId2');
@@ -42,6 +43,13 @@ stepsButton2.addEventListener('click', function () {
     }
 
 });
+
+stepsButton3.addEventListener('click', function (e) {
+    e.preventDefault();
+    formValidation3(inputArr3);
+});
+
+
 
 
 function displayForm(a, b) {
@@ -78,6 +86,18 @@ function formValidation2(inputArr2) {
     }
 }
 
+function formValidation3(inputArr3) {
+    for (let i = 0; i < inputArr3.length; i++) {
+        if (inputArr3[i].value === '') {
+            errorFunc3();
+            break;
+        }
+        return true;
+    }
+}
+
+
+
 
 /* function showError(input, message) {
     const formValidation = input.parentElement;
@@ -87,16 +107,25 @@ function formValidation2(inputArr2) {
 
 } */
 
-const errorMessage = document.querySelector(".error");
-const errorFunc = () => {
-  errorMessage.style.display = "block"
+const errorMessage3 = document.querySelector(".error3");
+const errorFunc3 = () => {
+    errorMessage3.style.display = "block"
 }
-
 
 const errorMessage2 = document.querySelector(".error2");
 const errorFunc2 = () => {
-  errorMessage2.style.display = "block"
+    errorMessage2.style.display = "block"
 }
+
+const errorMessage = document.querySelector(".error");
+const errorFunc = () => {
+    errorMessage.style.display = "block"
+}
+
+
+
+
+
 
 
 
