@@ -36,7 +36,10 @@ stepsButton.addEventListener('click', function () {
 
 
 stepsButton2.addEventListener('click', function () {
-
+    if (formValidation2(inputArr2)) {
+        displayForm(displayForm2, displayForm3);
+        return false;
+    }
 
 });
 
@@ -49,17 +52,30 @@ function displayForm(a, b) {
 
 var inputArr = [lName, fName, birthday,];
 var inputArr2 = [phone, email, county, city, address, zip];
-var inputArr3 = [password, passwordConfirm];
+var inputArr3 = [password, passwordConfirm, terms];
+
+const errorMessage = document.querySelector('p');
+
 
 function formValidation(inputArr) {
     for (let i = 2; i < inputArr.length; i++) {
         if (inputArr[i].value === '') {
-            alert("Nu ati completat toate campurile");
+            errorMessage.style.display = 'block'
             break;
         }
         return true;
     }
    
+}
+
+function formValidation2(inputArr2) {
+    for (let i = 5; i < inputArr2.length; i++) {
+        if (inputArr2[i].value === '') {
+            errorMessage.style.display = 'block'
+            break;
+        }
+        return true;
+    }
 }
 
 

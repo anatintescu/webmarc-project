@@ -140,28 +140,9 @@ margin: 15px 0 5px -4px;
 
 /* Form Validation */
 
-:root {
-  --errorColor: #f00e0e;
- 
-}
-
-.form-validation.error {
-  margin-bottom: 1.5rem;
-  position: relative;
-  border: 1px solid var(--errorColor);
-  border-radius: 4px;
-}
-
-
-.form-validation p {
-  font-size: 11px;
-  margin-top: 5px;
-  color: var(--errorColor);
+.error {
+  color: #f00e0e;
+  font-size: 12px;
   display: none;
 }
-
-.form-validation.error p {
-  display: block;
-}
-
 
