@@ -26,28 +26,28 @@ const displayForm3 = document.getElementById('formId2');
 
 
 stepsButton.addEventListener('click', function () {
-    showError();
-   
-   /* if (formValidation1()) {
-        displayForm(displayForm1, displayForm2);
 
-    } else {
-        return false;
-    } */
+     if (formValidation2(inputArr)) {
+         displayForm(displayForm2, displayForm3);
+     } else {
+        return false
+     } 
+
+
 
 });
 
 
 stepsButton2.addEventListener('click', function () {
-    
 
-    /*if (formValidation2()) {
-        displayForm(displayForm2, displayForm3);
-    } else {
-        return false;
-    } */
 
-}); 
+    /* if (formValidation2()) {
+         displayForm(displayForm2, displayForm3);
+     } else {
+         return false;
+     } */
+
+});
 
 
 function displayForm(a, b) {
@@ -139,36 +139,19 @@ function formValidation2() {
 };
  */
 
-// Show Error
+var inputArr = [lName, fName, birthday,];
+var inputArr2 = [phone, email, county, city, address, zip];
+var inputArr3 = [password, passwordConfirm];
 
-function showError(input, message) {
-    const formValidation = input.parentElement;
-    formValidation.className = 'form-validation error';
-
-    const errorMessage = formValidation.querySelector('p');
-    errorMessage.innerText = message;
-
-
-}
-
-
-
-// Check Required Fields 
-
-function checkRequired(inputArr) {
-    inputArr.forEach(function(input) {
-        if(input.value.trim() === '') {
-            showError(input, `${getFieldName(input)} is required`);
-        } else {
-            return false;
+function formValidation(inputArr) {
+    for (let i = 0; i < inputArr.length; i++) {
+        if (inputArr[i].value === '') {
+            alert("Nu ati completat toate campurile");
+            break;
         }
-    })
-   
+    }
 }
 
-// Get Fieldname 
-function getFieldName(input) {
-    return input.name.charAt(0).toUpperCase() + input.lName.slice(1);    }
 
 
 

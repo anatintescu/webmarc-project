@@ -4,7 +4,7 @@ function myFunction(a, b) {
     return a + b;
 }
 
-console.log(x);
+
 
 function myFunction2(a, b) {
     return a * b;
